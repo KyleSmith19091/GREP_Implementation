@@ -1,7 +1,7 @@
 run:
-	g++ -std=c++11 Main.cpp -I ./include -o main
-	./main test "test is a test"
+	g++ -std=c++11 ./src/*.cpp -I ./include -o ./build/main
+	./build/main test "test is a test"
 
 optim:
-	g++ -std=c++11 -O3 Main.cpp -I ./include -o main
-	./main
+	g++ -std=c++11 -O3 ./src/*.cpp -I ./include -o ./build/main
+	./build/main

@@ -10,6 +10,7 @@
 #define MAG "\e[0;35m"
 #define CYN "\e[0;36m"
 #define WHT "\e[0;37m"
+#define REGULAR_TEXT_LEN 8
 
 //Regular bold text
 #define BBLK "\e[1;30m"
@@ -20,6 +21,7 @@
 #define BMAG "\e[1;35m"
 #define BCYN "\e[1;36m"
 #define BWHT "\e[1;37m"
+#define REGULAR_BOLD_TEXT_LEN 8
 
 //Regular underline text
 #define UBLK "\e[4;30m"
@@ -30,6 +32,7 @@
 #define UMAG "\e[4;35m"
 #define UCYN "\e[4;36m"
 #define UWHT "\e[4;37m"
+#define REGULAR_UNDERLINE_TEXT_LEN 8
 
 //Regular background
 #define BLKB "\e[40m"
@@ -40,6 +43,7 @@
 #define MAGB "\e[45m"
 #define CYNB "\e[46m"
 #define WHTB "\e[47m"
+#define REGULAR_BACKGROUND_TEXT_LEN 6
 
 //High intensty background 
 #define BLKHB "\e[0;100m"
@@ -50,6 +54,7 @@
 #define MAGHB "\e[0;105m"
 #define CYNHB "\e[0;106m"
 #define WHTHB "\e[0;107m"
+#define HIGH_INTENSITY_BACKGROUND_TEXT_LEN 9 
 
 //High intensty text
 #define HBLK "\e[0;90m"
@@ -60,6 +65,7 @@
 #define HMAG "\e[0;95m"
 #define HCYN "\e[0;96m"
 #define HWHT "\e[0;97m"
+#define HIGH_INTENSITY_TEXT_LEN 8
 
 //Bold high intensity text
 #define BHBLK "\e[1;90m"
@@ -70,8 +76,14 @@
 #define BHMAG "\e[1;95m"
 #define BHCYN "\e[1;96m"
 #define BHWHT "\e[1;97m"
+#define HIGH_INTENSITY_TEXT_LEN 8
 
 //Reset
 #define reset "\e[0m"
+#define RESET_LEN 3
+
+constexpr const int getLengthOfANSICode(const int& i) noexcept {
+    return i + RESET_LEN;
+}
 
 #endif
